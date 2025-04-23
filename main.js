@@ -42,7 +42,6 @@ async function getWeather(location) {
 
         // Check if location is coordinates (latitude,longitude)
         if (location.includes(',')) {
-            // Fetch city name using current.json endpoint
             const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
             const response = await fetch(url);
             if (!response.ok) throw new Error('Network response was not ok.');

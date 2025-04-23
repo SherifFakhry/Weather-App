@@ -43,7 +43,7 @@ async function getWeather(location) {
         // Check if location is coordinates (latitude,longitude)
         if (location.includes(',')) {
             // Fetch city name using current.json endpoint
-            const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
+            const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
             const response = await fetch(url);
             if (!response.ok) throw new Error('Network response was not ok.');
             const data = await response.json();
@@ -53,7 +53,7 @@ async function getWeather(location) {
         updateTitle(cityName); // Update title with city name
 
         // Fetch forecast data
-        const forecastUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7`;
+        const forecastUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7`;
         const forecastResponse = await fetch(forecastUrl);
         if (!forecastResponse.ok) throw new Error('Network response was not ok.');
         const forecastData = await forecastResponse.json();

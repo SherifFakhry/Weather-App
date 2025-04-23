@@ -32,7 +32,7 @@ function getWeatherIcon(condition) {
 }
 
 async function getWeather(location) {
-    const apiKey = 'b73aee4d88ec4d97b7c12221212804'; // Replace with your API key
+    const apiKey = '622b3418f8b44818988172634252304'; // Replace with your API key
 
     try {
         const loader = document.getElementById('loader');
